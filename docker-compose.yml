@@ -1,7 +1,7 @@
 version: '2'
 services:
   kafka:
-    image: antlypls/kafka:0.8.2.2
+    image: antlypls/kafka:latest #0.8.2.2
     volumes:
        - ./kafka-producer/build/libs:/app
        - ./kafka-producer/script:/script
@@ -13,10 +13,10 @@ services:
       - "9092"
 
   cassandra:
-    image: cassandra:2.2.6
+    image: cassandra:latest # 3.11.3
 
   spark:
-    image: antlypls/spark:1.6.0
+    image: antlypls/spark:latest #1.6.0
     volumes:
       - ./spark-consumer/build/libs:/app
       - ./spark-consumer/script:/script
